@@ -84,7 +84,7 @@ var PARAMS_PER_TARGET = {
 };
 
 var target = _resolveBuildTarget(DEFAULT_TARGET);
-var params = _.merge(DEFAULT_PARAMS, PARAMS_PER_TARGET[target], _mergeArraysCustomizer);
+var params = _.mergeWith(DEFAULT_PARAMS, PARAMS_PER_TARGET[target], _mergeArraysCustomizer);
 
 _printBuildInfo(target, params);
 
